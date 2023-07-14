@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelUp Games</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        
+
+        .navbar{
+            display: flex;
+            position: fixed;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .logo{
+            height: 80px;
+            width: 80px;
+            border-radius: 400px;
+            margin: 10px 10px;
+            border: 2px solid palevioletred;
+        }
+        .logo img{
+            height: 80px;
+            width: 80px;
+            border-radius: 400px;
+        }
+        .navigation{
+            display: flex;
+            justify-content: space-evenly;
+            width: 600px;
+        }
+        .items a{
+              font-size: 25px;
+              text-decoration: none;
+              color:wheat;
+        }
+        .items a:hover{
+              font-size: 30px;
+              text-decoration: none;
+              color: palevioletred;
+        }
+        
+        .buttons button{
+            margin-right: 30px;
+            background:rgba(0,0, 0, 0.1) ;
+            color: palevioletred;
+            border: 2px solid palevioletred;
+            font-size: 16px;
+            padding: 6px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .buttons button:hover{
+            margin-right: 30px;
+            background:rgba(0,0, 0, 0.1) ;
+            color: palevioletred;
+            border: 2px solid palevioletred;
+            font-size: 16px;
+            padding: 8px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        #heading{
+            height:100vh;
+            width: 100vw;
+            background-size: cover;
+            background-image: url(img/heading_background.jpg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .qoute{
+            font-size: 36px;
+            text-align: center;
+            width: 50%;
+            color: palevioletred;
+        }
+        .para{
+            margin-left: 23%;
+        }
+        .description{
+            color: wheat;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            width: 70%;
+            align-self: center;
+        }
+        .description button{
+            color:palevioletred;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 18px;
+            background:rgba(0,0, 0, 0.1) ;
+            border: 3px solid palevioletred;
+            padding: 10px;
+            border-radius: 30px;
+        }
+        .description button:hover{
+            color:palevioletred;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 22px;
+            background:rgba(0,0, 0, 0.1) ;
+            border: 3px solid palevioletred;
+            padding: 10px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        #games{
+            height: 100vh;
+            width: 100vw;
+            background: url(img/games_background.jpg);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+         .btn button{
+            width: 150px;
+            font-size: 20px;
+            color: palevioletred;
+            text-decoration: none;
+            display: block;
+            margin-right: 30px;
+            background: wheat;
+            border: 2px solid palevioletred;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 3px;
+        }
+        .game_head h1{
+            font-size: 45px;
+            color:wheat;
+            margin-top: 30px;
+        }
+        .games{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 0px;
+        }
+        .game{
+            border:2px solid palevioletred;
+            border-radius: 20px;
+            height: 253px;
+            width: 212px;
+            background-color: blueviolet;
+            box-shadow: 0 10px 30px blueviolet;
+            
+        }
+        .game img{
+            height: 150px;
+            width: 212px;
+            border-top-left-radius:20px ;
+            border-top-right-radius:20px ;
+            
+        }
+        .des{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: wheat;
+        }
+        .des button{
+            font-size: 12px;
+            height: 20px;
+            padding: 4px;
+            color: palevioletred;
+            background: wheat;
+            border: 2px solid palevioletred;
+            margin: 2px;
+            cursor: pointer;
+
+        }
+        
+        #about{
+            height: 100vh;
+            width: 100vw;
+            background: url(img/reviews_background.jpg);
+            opacity: 100%;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .levelup{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        #img img{
+            height: 90px;
+            width: 90px;
+            border-radius: 400px;
+            margin: 10px 10px;
+            border: 2px solid palevioletred;
+        }
+        #name{
+            font-size: 44px;
+            color:violet;
+        }
+        .text{
+            width: 94vw;
+            text-align: center;
+            color:blanchedalmond;
+            font-size: 23px;
+            line-height: 23px;
+        }
+        
+        #contact{
+            height: 100vh;
+            width: 100vw;
+            background: url(img/offer_background.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact{
+            border: 10px solid wheat;
+            width: 70vw;
+            height: 70vh;
+            border-bottom-width: 0px;
+            border-top-width: 0px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .contact p{
+            margin-top: 80px;
+            font-size: 22px;
+            color:white;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="LevelUp">
+        </div>
+        <div class="navigation">
+            <div class="items">
+                <a href="#heading">Home</a>
+            </div>
+            <div class="items">
+                <a href="#games">Games</a>
+            </div>
+            
+            <div class="items">
+                <a href="#about">About Us</a>
+            </div>
+            <div class="items">
+                <a href="#contact">Contact us</a>
+            </div>
+        </div>
+        <div class="buttons">
+            <button>SignUP</button>
+            <button>SignIN</button>
+        </div>
+    </div>
+    <section id="heading">
+        
+        <div class="qoute">
+            <p><b>"Level up your gaming experience with us. Unleash epic adventures, thrilling challenges, and endless fun."</b></p>
+        </div>
+        <div class="para">
+            <div class="description">
+                <p>"Elevate your gaming experience to new heights. Explore a vast collection of immersive games, engage in epic battles, and connect with a vibrant community of passionate gamers. Get ready to level up your game!"</p>
+                <button><b>Explore Now</b></button>
+            </div>
+            
+        </div>
+    </section>
+    <section id="games">
+        <div class="game_head">
+            <h1>Top Games</h1>
+        </div>
+        
+        <div class="games">
+            <div class="game">
+                <div class="game_img">
+                    <img src="img/game!.jpg" alt="Feathered Targets">
+                </div>
+                <div class="des">
+                    <h1>Feathered Targets</h1>
+                    <p>Rs 2500/- </p>
+                    <button><b>About game</b></button>
+                    <button><b>Buy Now</b></button>
+                </div>
+                
+            </div>
+            <div class="game"><div class="game_img">
+                    <img src="img/game 2.jpg" alt="Velocity Rush">
+                </div>
+                <div class="des">
+                    <h1>Velocity Rush</h1>
+                    <p>Rs 1599/- </p>
+                    <button><b>About game</b></button>
+                    <button><b>Buy Now</b></button>
+                </div></div>
+            <div class="game"><div class="game_img">
+                    <img src="img/game3.jpg" alt="Chakravyuh">
+                </div>
+                <div class="des">
+                    <h1>Chakravyuh</h1>
+                    <p>Rs 5599/- </p>
+                    <button><b>About game</b></button>
+                    <button><b>Buy Now</b></button>
+                </div></div>
+            <div class="game"><div class="game_img">
+                    <img src="img/game4.jpg" alt="RajGaurd">
+                </div>
+                <div class="des">
+                    <h1>RajGaurd</h1>
+                    <p>Rs 4500/- </p>
+                    <button><b>About game</b></button>
+                    <button><b>Buy Now</b></button>
+                </div></div>
+            
+        </div>
+        <div class="btn">
+            <button><b>More games...</b></button>
+        </div>
+        
+    </section>
+    <section id="about">
+        <div class="levelup">
+            <div id="img">
+                <img src="img/logo.jpg" alt="LevelUp Games">
+            </div>
+            <div id="name" >
+                <b>LevelUp Games </b>
+            </div>
+            
+        </div>
+        
+        <div class="text">
+            <p>Welcome to the landing page I have created as part of my internship at Oasis Infobyte. My name is <b>Tanmay Sharma</b>, and I am excited to present this project to you.</p>
+            <p>During my internship, I was assigned the task of creating a captivating landing page for a gaming company. The result of my efforts is this website, which showcases my skills in web development and design.</p>
+            <p>As this website is not yet uploaded for public access, I have made the code available on GitHub. You can find the code repository at [GitHub repository URL]. Feel free to explore the code and review the structure, design, and implementation.</p>
+            <p>I am grateful for the opportunity that Oasis Infobyte has provided me with through this internship. This experience has allowed me to further develop my abilities and gain practical knowledge in the field of web development.</p>
+            <p>Please connect with me on Instagram [@YourInstagramID] and LinkedIn [@YourLinkedInID] to stay updated on my progress throughout the internship and beyond.</p>
+            <p>Thank you for your interest in my work. If you have any questions or feedback regarding the code or the project, please don't hesitate to reach out.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact">
+            <p>Phone number: 1234567890</p>
+            <p>Email Id: ubyvcldhdh@gmail.com</p>
+            <p>Address: dgshdqjhvjhvljhvjhbljhvujbljvuubjvuuljluv</p>
+        </div>
+    </section>
+    
+</body>
+</html>
+
