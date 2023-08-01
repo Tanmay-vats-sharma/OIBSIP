@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Tanmay Sharma</title>
+    <style>
+        body {
+            /* background-color:rgb(219, 217, 217); */
+            border-color: sparkelblack;
+            margin: 0px;
+            padding: 0px;
+            text-decoration-color: white;
+        }
+
+        .resume {
+            display: flex;
+            height: 99.4vh;
+            align-items: center;
+            border: 10px solid;
+            border-bottom-width: 2px;
+            border-top-width: 2px;
+            background-color: powderblue;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .details {
+            width: 550px;
+            height: 99.4vh;
+            background: url(img/Tanmay.png);
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-left: 60%;
+        }
+
+        .image h1 {
+            text-align: center;
+            font-size: 55px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-left: 100px;
+            text-shadow: 3px 3px 3px black;
+            color: blueviolet;
+
+        }
+
+        .education {
+            width: 830px;
+            height: 0vh;
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: column;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            justify-content: space-between;
+            position: fixed;
+            animation: height;
+            animation-duration: 800ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            align-self: flex-end;
+            align-items: center;
+        }
+
+        .education-details {
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            margin-left: -125px;
+            animation: slide;
+            animation-duration: 800ms;
+            animation-iteration-count: 1;
+            animation-delay: 800ms;
+            animation-fill-mode: forwards;
+            opacity: 0%;
+            animation-timing-function: ease-in;
+
+        }
+
+        h2 {
+            color: palegreen;
+            border-bottom: 2px solid paleturquoise;
+            padding-bottom: 5px;
+            text-shadow: 3px 3px 3px black;
+            font-size: 50px;
+            margin: 10px;
+
+        }
+        .education-item{
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid paleturquoise;
+        }
+        .education_text2{
+            color: palegreen;
+            font-size: 20px;
+            text-shadow: 2px 2px 2px black;
+        }
+        .education-photo img{
+            width: 190px;
+            height: 190px;
+            border-radius: 100px;
+            border: 2px solid palevioletred;
+            box-shadow: 3px 3px 3px palegreen;
+        }
+        .education-item2{
+            display: flex;
+            border-bottom: 2px solid paleturquoise;
+            align-items: center;
+        }
+        .education-school img{
+            border: 2px solid palevioletred;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px palegreen;
+
+        }
+        .education_text{
+            margin-left: 20px;
+            margin-right: 40px;
+            color: palegreen;
+            font-size: 20px;
+            text-shadow: 2px 2px 2px black;
+
+        }
+
+        .navigation{
+            display: flex;
+            justify-content: space-evenly;
+            animation-name: slide3;
+            animation-duration: 900ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            opacity: 0%;
+            width: 0px;
+            animation-delay: 800ms;
+            text-shadow: 0px 3px 2px black;
+            
+        }
+        .navigation a{
+            font-size: 18px;
+            color: palegreen;
+            text-decoration: none;
+            cursor: pointer;
+            align-items: center;
+        }
+        .navigation a.active{
+            font-size: 25px;
+            color: palevioletred;
+            cursor: pointer;
+            margin-top: -12px;
+        }
+        .navigation a:hover{
+            font-size: 25px;
+            color: palevioletred;
+            cursor: pointer;
+            margin-top: -12px;
+        }
+
+        @keyframes slide {
+            from{
+                opacity: 0%;
+                margin-left: -125px;
+            }
+            to{opacity: 100%;margin-left: 0px;}
+        }
+
+        @keyframes slide3 {
+            from{
+                opacity: 0%;
+                width: 0px;
+            }
+            to{opacity: 100%;width: 700px;}
+        }
+
+        @keyframes height {
+            from {
+                height: 0vh;
+            }
+
+            to {
+                height: 99.4vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume">
+        <div class="education">
+            <div class="education-details">
+                <h2>Education</h2>
+                <div class="education-item2">
+                    <div class="education_text">
+                        <h3>Laxmi Public School</h3>
+                        <p>2021 - 2023</p>
+                        <p>Stream: Science (PCM)</p>
+                        <p>Location: Delhi, India</p>
+                    </div>
+                    <div class="education-school">
+                        <img src="img/laxmi public school.jpg" alt="">
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education_text2">
+                        <h3>Raj Kumar Goel Institute of Technology</h3>
+                        <p>2023 - Present</p>
+                        <p>Course: B.Tech in Information and Technology (IT)</p>
+                        <p>Location: Uttar Pradesh, Ghaziabad, India</p>
+                    </div>
+                    
+                    <div class="education-photo">
+                        <img src="img/rkgit.jpg" alt="">
+                    </div>
+                    
+                </div>
+
+                <div class="nav">
+                    <div class="navigation">
+                     <a href="index.html" >
+                          <p><b>Home</b></p>
+                     </a>
+                     <a href="Education.html"class="active">
+                        <p><b>Education</b></p>
+                     </a>
+                     <a href="skills.html">
+                       <p><b>Skills</b></p>
+                     </a>
+                     <a href="contact.html">
+                         <p><b>Contact</b></p>
+                     </a>
+                    </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="details">
+            <div class="image">
+                <h1>Tanmay Sharma</h1>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

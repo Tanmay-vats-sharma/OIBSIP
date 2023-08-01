@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Previous CSS code remains the same */
+
+.contact {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #4285F4; /* Use your preferred color */
+    border-bottom: 2px solid #4285F4;
+    padding-bottom: 5px;
+}
+
+p {
+    color: #666666; /* Use your preferred color */
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333; /* Use your preferred color */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4285F4; /* Use your preferred color */
+    color: #ffffff; /* Use your preferred color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3367D6; /* Use a slightly darker shade on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch or have any inquiries, feel free to reach out to me using the contact form below:</p>
+        <form action="submit_contact_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
