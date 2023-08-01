@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Tanmay Sharma</title>
+    <style>
+        body {
+            /* background-color:rgb(219, 217, 217); */
+            border-color: sparkelblack;
+            margin: 0px;
+            padding: 0px;
+            text-decoration-color: white;
+        }
+
+        .resume {
+            display: flex;
+            height: 99.4vh;
+            align-items: center;
+            border: 10px solid;
+            border-bottom-width: 2px;
+            border-top-width: 2px;
+            background-color: powderblue;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .contact{
+            width: 830px;
+            height: 0vh;
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: column;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            animation: height;
+            animation-duration: 900ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            animation-delay: 900ms;
+            align-self: flex-end;
+        }
+
+        .contact-form{
+            width: 700px;
+            align-items: center;
+            animation: slide;
+            animation-duration: 900ms;
+            animation-iteration-count: 1;
+            animation-delay: 900ms;
+            animation-fill-mode: forwards;
+            opacity: 0%;
+            animation-timing-function: ease-in;
+        }
+
+        h2 {
+            color: palegreen;
+            border-bottom: 2px solid paleturquoise;
+            padding-bottom: 5px;
+            text-shadow: 3px 3px 3px black;
+            font-size: 50px;
+            margin: 10px;
+
+        }
+
+        .txt p {
+            color: palegreen;
+            font-size: 20px;
+            text-shadow: 3px 3px black;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 28px;
+            color:palegreen;
+            text-shadow: 3px 3px black;
+        }
+
+        input,
+        textarea {
+            width: 70%;
+            padding: 10px;
+            border: 2px solid palevioletred;
+            background-color: palegreen;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4285F4;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3367D6;
+        }
+
+        .details {
+            width: 550px;
+            height: 99.4vh;
+            background: url(img/Tanmay.png);
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-left: 60%;
+        }
+
+        .image h1 {
+            text-align: center;
+            font-size: 55px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-left: 100px;
+            text-shadow: 3px 3px 3px black;
+            color: blueviolet;
+
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-evenly;
+            animation-name: slide3;
+            animation-duration: 900ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            opacity: 0%;
+            width: 0px;
+            animation-delay: 900ms;
+            text-shadow: 0px 3px 2px black;
+
+        }
+
+        .navigation a {
+            font-size: 18px;
+            color: palegreen;
+            text-decoration: none;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        .navigation a.active {
+            font-size: 25px;
+            color: palevioletred;
+            cursor: pointer;
+            margin-top: -12px;
+        }
+
+        .navigation a:hover {
+            font-size: 25px;
+            color: palevioletred;
+            cursor: pointer;
+            margin-top: -12px;
+        }
+
+        @keyframes slide3 {
+            from {
+                opacity: 0%;
+                width: 0px;
+            }
+
+            to {
+                opacity: 100%;
+                width: 700px;
+            }
+        }
+
+        @keyframes slide {
+            from {
+                opacity: 0%;
+                margin-left: -125px;
+            }
+
+            to {
+                opacity: 100%;
+                margin-left: 0px;
+            }
+        }
+
+        @keyframes height {
+            from {
+                height: 0vh;
+            }
+
+            to {
+                height: 99.4vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume">
+        <div class="contact">
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <div class="txt">
+                    <p>If you'd like to get in touch or have any inquiries, feel free to reach out to me using the contact form
+                        below:</p>
+                </div>
+                <form action="submit_contact_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="nav">
+                <div class="navigation">
+                    <a href="index.html">
+                        <p><b>Home</b></p>
+                    </a>
+                    <a href="Education.html">
+                        <p><b>Education</b></p>
+                    </a>
+                    <a href="skills.html">
+                        <p><b>Skills</b></p>
+                    </a>
+                    <a href="contact.html" class="active">
+                        <p><b>Contact</b></p>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="details">
+            <div class="image">
+                <h1>Tanmay Sharma</h1>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
